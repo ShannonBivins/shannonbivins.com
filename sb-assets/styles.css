@@ -10,7 +10,7 @@
 }
 *
 {
-    cursor: url('/images/cursor.svg'), auto !important;
+    cursor: url('images/cursor.svg'), auto !important;
 }
 html
 {
