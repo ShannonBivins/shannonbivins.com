@@ -41,10 +41,15 @@ fetch('https://shan-strapi.herokuapp.com/api/articles?populate=*')
 .then(response => response.json())
 .then(data => getArticles(data));
 
-function loadMore() //called from load more button
+function loadMore(button)
 {
     let articlesHTML = ``;
     let newTotal = postCount + loadCount;
+
+    if(newTotal > articles.length)
+    {
+        return;
+    }
     
     for(x = postCount; x < newTotal; x++)
     {
@@ -69,6 +74,11 @@ function loadMore() //called from load more button
         postCount++;
     }
     blogSection[0].innerHTML += articlesHTML;
+
+    if(postCount = articles.length)
+    {
+        button.classList.add('greyed-out');
+    }
 }
 
 function addCategories(data)
@@ -79,7 +89,7 @@ function addCategories(data)
     for(x = 0; x < categories.length; x++)
     {
         categoriesHTML += `
-        <a topic-id="${categories[x]['attributes']['Name']}" class="topics" href="#" onclick="filterPosts(this.getAttribute('topic-id'))">${categories[x]['attributes']['Name']}</a>`;
+        <a topic-id="${categories[x]['attributes']['Name']}" class="topics" href="#" onclick="filterPosts(this, this.getAttribute('topic-id'))">${categories[x]['attributes']['Name']}</a>`;
         
         if(x < categories.length - 1)
         {
@@ -92,9 +102,12 @@ fetch('https://shan-strapi.herokuapp.com/api/categories')
 .then(response => response.json())
 .then(data => addCategories(data));
 
-function filterPosts(newCategory)
+function filterPosts(category)
 {
-    currentCategory = newCategory;
+    document.getElementsByClassName('selected')[0].classList.remove('selected');
+    category.classList.add('selected');
+
+    currentCategory = category.innerHTML;
     let posts = document.getElementsByClassName('post');
     
     if(currentCategory == 'All')

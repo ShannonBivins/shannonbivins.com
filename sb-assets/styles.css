@@ -102,7 +102,7 @@ button
 {
     width: fit-content;
     background: black;
-    color: #CC9832;
+    color: var(--gold);
     font-family: 'Staatliches', sans-serif;
     padding: 12px 20px 10px 20px;
     margin-top: 20px;
@@ -118,7 +118,7 @@ button:hover
 {
     transform: scale(1.05);
     color: black;
-    background: #CC9832;
+    background: var(--gold);
 }
 button:active
 {
@@ -199,7 +199,7 @@ button:active
 }
 #menu-btn i:hover
 {
-    color: #CC9832;
+    color: var(--gold);
 }
 #social
 {
@@ -471,6 +471,7 @@ button:active
 }
 .post-section
 {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -489,12 +490,12 @@ button:active
     margin: 30px;
     position: relative;
     border-width: 0 0 2px 0;
-    border-color: #CC9832;
+    border-color: var(--gold);
     border-style: solid;
 }
 .category
 {
-    color: #CC9832;
+    color: var(--gold);
 }
 .post .post-img
 {
@@ -539,11 +540,23 @@ button:active
     color: black;
     font-size: 60%;
 }
+.greyed-out, .greyed-out:hover
+{
+    background: grey !important;
+    color: var(--black);
+    border-color: grey !important;
+    transform: scale(1) !important;
+}
+.selected
+{
+    transform: scale(1.1) !important;
+    color: var(--gold) !important;
+}
 /***** END BLOG SECTION *****/
 
 
 
-/***** HOME CONTAINER STYLES *****/
+/***** HOME SECTION *****/
 #home
 {
     position: fixed;
@@ -600,7 +613,7 @@ button:active
 {
     transform: rotateY(180deg);
 }
-/***** END HOME CONTAINER STYLES *****/
+/***** END HOME SECTION *****/
 
 
 
