@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.allStrapiArticle.nodes.forEach(node => {
     actions.createPage({
-      path: '/articles/' + node.Slug,
+      path: '/blog/' + node.Slug,
       component: path.resolve('./src/templates/article.js'),
       context: { Slug: node.Slug }
     })

@@ -78,7 +78,7 @@ const BlogPage = () => {
         {
             articlesHTML += `<div class="post" topic="${articles[x]['Categories'][0]['Name']}">
         
-                <a style="position: absolute; top: 0; left: 0; height: 100%; width: 100%;" href="/articles/${articles[x]['Slug']}"></a>
+                <a style="position: absolute; top: 0; left: 0; height: 100%; width: 100%;" href="/blog/${articles[x]['Slug']}"></a>
                     
                 <img class="post-img" src="${articles[x]['Image']['url']}" alt="" />
                     
@@ -115,7 +115,7 @@ const BlogPage = () => {
                 <div className={ `post-section` }>
                     { articles.slice(0, postCount).map((article) => (
                         <div key={ article.id } className={ `post` } topic={ article.Categories[0].Name }>
-                            <a style={{ position: `absolute`, top: 0, left: 0, height: `100%`, width: `100%` }} href={ '/articles/' + article.Slug }>{ null }</a>
+                            <a style={{ position: `absolute`, top: 0, left: 0, height: `100%`, width: `100%` }} href={ '/blog/' + article.Slug }>{ null }</a>
 
                             <img className={ 'post-img' } src={ article.Image.url } alt=""/>
  
