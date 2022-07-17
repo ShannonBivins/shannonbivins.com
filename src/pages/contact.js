@@ -14,28 +14,28 @@ const ContactPage = () => {
         
         xhttp.onload = function()
         {
-            if(this.responseText === 1)
+            if(this.status === 200)
             {
                 document.querySelector('#form-message').innerHTML =
                 `<i class="fas fa-check"></i>
-                <p>Thank you, ${name}!</br>your message has been sent</p>`;
+                <p>Thank you, ${name}!</br>Your message has been sent.</p>`;
                 
                 document.querySelector('input[name="name"]').value = "";
                 document.querySelector('input[name="email"]').value = "";
                 document.querySelector('input[name="subject"]').value = "";
                 document.querySelector('textarea[name="message"]').value = "";
             }
-            else if(this.responseText === 0)
+            else if(this.status === 400)
             {
                 document.querySelector('#form-message').innerHTML =
-                `<i class="fas fa-times"></i>
-                <p>I'm sorry, your message could not be sent</br>Please try again later</p>`;
+                `<i class="fa-solid fa-x"></i>
+                <p>${JSON.parse(this.response).error.message}</p>`;
             }
             else
             {
                 document.querySelector('#form-message').innerHTML =
-                `<i class="fas fa-times"></i>
-                <p>${this.responseText}</p>`;
+                `<i class="fa-solid fa-x"></i>
+                <p>I'm sorry, your message could not be sent.</br>Please try again later.</p>`;
             }
             
             document.querySelector('#form-message').style.display = "flex";
