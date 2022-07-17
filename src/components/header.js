@@ -33,7 +33,7 @@ const Header = () => {
       }}
     >
       <Link id="sb-logo" to="/">
-        <StaticImage src="../images/sb-logo-circuits.svg" alt="" />
+        <StaticImage src="../images/sb-logo-circuits.svg" alt="" loading="eager" placeholder="none"/>
       </Link>
 
       <div id="menu">

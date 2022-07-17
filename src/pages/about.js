@@ -45,7 +45,7 @@ const AboutPage = () => (
                     </ul>
                 </div>
                 <div id="about-img">
-                    <StaticImage src="../images/portrait-drawing.png" alt="" />
+                    <StaticImage src="../images/portrait-drawing.png" alt="" loading="eager"/>
                 </div>
             </div>
             <div style={{ margin: `40px auto 0 auto` }}>
@@ -55,9 +55,9 @@ const AboutPage = () => (
                     <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, display: `inline-block` }}></hr>
 
                     <div style={{ display: `flex`, flexWrap: `wrap`, justifyContent: `center` }}>
-                        <StaticImage className={ `certificate` } src="../images/3cx-basic-certified-badge.png" alt="" />
-                        <StaticImage className={ `certificate` } src="../images/3cx-intermediate-certified-badge.png" alt="" />
-                        <StaticImage className={ `certificate` } src="../images/3cx-advanced-certified-badge.png" alt="" />
+                        <StaticImage className={ `certificate` } src="../images/3cx-basic-certified-badge.png" alt="" placeholder="none"/>
+                        <StaticImage className={ `certificate` } src="../images/3cx-intermediate-certified-badge.png" alt="" placeholder="none"/>
+                        <StaticImage className={ `certificate` } src="../images/3cx-advanced-certified-badge.png" alt="" placeholder="none"/>
                     </div>
                 </div>
             </div>

@@ -50,7 +50,7 @@ const ServicePage = () => (
                 <div style={{ display: `flex`, width: `min(1000px, 90%)`, flexWrap: `wrap`, justifyContent: `center` }}>
                     <div style={{ width: `min(450px, 90%)`, display: `flex`, flexDirection: `column`, alignItems: `center` }}>
                         <div style={{ display: `flex`, alignItems: `center` }}>
-                            <StaticImage src="../images/unity-logo.png" alt="" />
+                            <StaticImage src="../images/unity-logo.png" alt="" loading="eager" placeholder="none"/>
                             <h3 style={{ color: `var(--black)`, fontSize: `48px`, margin: `0 0 0 20px` }}>Unity</h3>
                         </div>
                         
@@ -65,7 +65,7 @@ const ServicePage = () => (
                     
                     <div style={{ width: `min(450px, 90%)`, display: `flex`, flexDirection: `column`, alignItems: `center` }}>
                         <div style={{ display: `flex`, alignItems: `center` }}>
-                            <StaticImage src="../images/unreal-engine.png" alt="" />
+                            <StaticImage src="../images/unreal-engine.png" alt="" loading="eager" placeholder="none"/>
                             <h3 style={{ color: `var(--black)`, fontSize: `48px`, margin: `0 0 0 20px` }}>Unreal</h3>
                         </div>
                         
@@ -125,7 +125,7 @@ const ServicePage = () => (
 
             <div className={ `service` } style={{ display: `flex`, alignItems: `center`, justifyContent: `center`, width: `min(1000px, 90%)`, padding: `60px var(--social-padding) 0 0`, flexWrap: `wrap`, margin: `0 auto` }}>
                 <div style={{ width: `min(500px, 90%)`, display: `flex`, justifyContent: `center` }}>
-                    <StaticImage  style={{ width: `min(350px, 90%)`}} src="../images/3cx-advanced-certified-badge.png" alt=""/>
+                    <StaticImage  style={{ width: `min(350px, 90%)`}} src="../images/3cx-advanced-certified-badge.png" alt="" placeholder="none"/>
                 </div>
                 
                 <div style={{ width: `min(500px, 90%)`, display: `flex`, flexDirection: `column`, justifyContent: `center` }}>
