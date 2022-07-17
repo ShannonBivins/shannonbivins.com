@@ -110,6 +110,8 @@ const BlogPage = () => {
                     { categories.map((category, i) => ( <><FontAwesomeIcon icon={'fa-diamond'} /><button key={ i } topic-id={ category.Name } class="topics" onClick={(e) => { filterPosts(e, category) }}>{ category.Name }</button></> ))}
                 </div>
 
+                <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, margin: `10px auto 10px auto` }}></hr>
+
                 <div className={ `post-section` }>
                     { articles.slice(0, postCount).map((article, i) => (
                         <div key={ i } className={ `post` } topic={ article.Categories[0].Name }>

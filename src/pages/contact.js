@@ -16,14 +16,23 @@ const ContactPage = () => {
         {
             if(this.status === 200)
             {
-                document.querySelector('#form-message').innerHTML =
-                `<i class="fas fa-check"></i>
-                <p>Thank you, ${name}!</br>Your message has been sent.</p>`;
-                
-                document.querySelector('input[name="name"]').value = "";
-                document.querySelector('input[name="email"]').value = "";
-                document.querySelector('input[name="subject"]').value = "";
-                document.querySelector('textarea[name="message"]').value = "";
+                if(name === '' || email === '' || subject === '' || message === '' )
+                {
+                    document.querySelector('#form-message').innerHTML = 
+                    `<i class="fa-solid fa-x"></i>
+                    <p>All fields are required.</p>`;
+                }
+                else
+                {
+                    document.querySelector('#form-message').innerHTML =
+                    `<i class="fas fa-check"></i>
+                    <p>Thank you, ${name}!</br>Your message has been sent.</p>`;
+                    
+                    document.querySelector('input[name="name"]').value = "";
+                    document.querySelector('input[name="email"]').value = "";
+                    document.querySelector('input[name="subject"]').value = "";
+                    document.querySelector('textarea[name="message"]').value = "";
+                }
             }
             else if(this.status === 400)
             {
@@ -70,8 +79,10 @@ const ContactPage = () => {
             <div id="contact">
                 <div className={ `text-section` }>
                     <h3 style={{ marginTop: 0, textAlign: `center`, color: `var(--platinum)`, marginBottom: 0 }}>WANT TO WORK WITH ME?</h3>
-                    <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, margin: `10px auto 20px auto` }}></hr>
-                    <p style={{ marginBottom: `34px` }}>
+
+                    <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, margin: `15px auto 20px auto` }}></hr>
+
+                    <p style={{ marginBottom: `34px`, textAlign: `center` }}>
                         If you have a project and you're interested in working with me, please fill out the form below to let me know and I will get back with you as soon as I can. Thank you!
                     </p>
             
