@@ -510,7 +510,7 @@ button:active
 {
     color: var(--gold);
 }
-.post .post-img
+.post .post-img, #single-post .post-img
 {
     box-sizing: border-box;
     padding: 10px;
@@ -627,6 +627,15 @@ button:active
     transform: rotateY(180deg);
 }
 /***** END HOME SECTION *****/
+
+
+
+/***** SINGLE POST PAGE *****/
+#single-post
+{
+    padding-right: calc(var(--social-padding) + 60px);
+    padding-left: 60px;
+}
 
 
 

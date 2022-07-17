@@ -11,7 +11,6 @@ const BlogPage = () => {
             allStrapiCategory {
                 nodes {
                     Name
-                    id
                 }
             }
             allStrapiArticle {
@@ -25,7 +24,6 @@ const BlogPage = () => {
                         Name
                     }
                     Slug
-                    id
                 }
             }
         }
@@ -109,12 +107,12 @@ const BlogPage = () => {
             <div id="blog">
                 <div className={ `topic-section` }>
                     <button className={ `topics selected` } onClick={(e) => { filterPosts(e, 'All') }}>All</button>
-                    { categories.map((category) => ( <><FontAwesomeIcon icon={'fa-diamond'} /><button key={ category.id } topic-id={ category.Name } class="topics" onClick={(e) => { filterPosts(e, category) }}>{ category.Name }</button></> ))}
+                    { categories.map((category, i) => ( <><FontAwesomeIcon icon={'fa-diamond'} /><button key={ i } topic-id={ category.Name } class="topics" onClick={(e) => { filterPosts(e, category) }}>{ category.Name }</button></> ))}
                 </div>
 
                 <div className={ `post-section` }>
-                    { articles.slice(0, postCount).map((article) => (
-                        <div key={ article.id } className={ `post` } topic={ article.Categories[0].Name }>
+                    { articles.slice(0, postCount).map((article, i) => (
+                        <div key={ i } className={ `post` } topic={ article.Categories[0].Name }>
                             <a style={{ position: `absolute`, top: 0, left: 0, height: `100%`, width: `100%` }} href={ '/blog/' + article.Slug }>{ null }</a>
 
                             <img className={ 'post-img' } src={ article.Image.url } alt=""/>
