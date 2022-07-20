@@ -716,7 +716,7 @@ button:active
     }
     #single-post > div div:nth-child(2)
     {
-        border-radius: 0 !important;
+        border-radius: 0 0 8px 8px !important;
     }
 }
 @media(max-height: 420px)
