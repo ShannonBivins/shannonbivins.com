@@ -11,40 +11,48 @@ const ContactPage = () => {
         var message = document.querySelector('textarea[name="message"]').value;
         
         const xhttp = new XMLHttpRequest();
+
+        if(name === '' || email === '' || subject === '' || message === '' )
+        {
+            document.querySelector('#form-message').innerHTML = 
+            `<p>All fields are required.</p>`;
+
+            document.querySelector('#form-message').style.display = "flex";
+            document.querySelector('#form-message').style.opacity = "1";
+            
+            setTimeout(function()
+            {
+                document.querySelector('#form-message').style.opacity = 0;
+            }, 3000);
+            setTimeout(function()
+            {
+                document.querySelector('#form-message').style.display = "none";
+            }, 3500);
+
+            return;
+        }
         
         xhttp.onload = function()
         {
             if(this.status === 200)
             {
-                if(name === '' || email === '' || subject === '' || message === '' )
-                {
-                    document.querySelector('#form-message').innerHTML = 
-                    `<i class="fa-solid fa-x"></i>
-                    <p>All fields are required.</p>`;
-                }
-                else
-                {
-                    document.querySelector('#form-message').innerHTML =
-                    `<i class="fas fa-check"></i>
-                    <p>Thank you, ${name}!</br>Your message has been sent.</p>`;
-                    
-                    document.querySelector('input[name="name"]').value = "";
-                    document.querySelector('input[name="email"]').value = "";
-                    document.querySelector('input[name="subject"]').value = "";
-                    document.querySelector('textarea[name="message"]').value = "";
-                }
+                document.querySelector('#form-message').innerHTML =
+                `<p>Thank you, ${name}!</br>your message has been sent.</p>`;
+                
+                document.querySelector('input[name="name"]').value = "";
+                document.querySelector('input[name="email"]').value = "";
+                document.querySelector('input[name="subject"]').value = "";
+                document.querySelector('textarea[name="message"]').value = "";
             }
             else if(this.status === 400)
             {
                 document.querySelector('#form-message').innerHTML =
-                `<i class="fa-solid fa-x"></i>
-                <p>${JSON.parse(this.response).error.message}</p>`;
+                `<p>${JSON.parse(this.response).error.message}</p>`;
             }
             else
             {
                 document.querySelector('#form-message').innerHTML =
-                `<i class="fa-solid fa-x"></i>
-                <p>I'm sorry, your message could not be sent.</br>Please try again later.</p>`;
+                `<p>I'm sorry, your message could not be sent.</br>Please try again later.</p>`;
             }
             
             document.querySelector('#form-message').style.display = "flex";
