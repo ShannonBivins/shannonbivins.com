@@ -29,7 +29,7 @@ const AboutPage = () => (
                         I work with my partner Chris at <a href="https://netex.consulting" style={{ textDecoration: `none`, color: `#CC9832` }}>Netex Consulting</a> and have been for 5 years. My work mainly consists of web development, databasing, and configuring 3CX phone systems.
                     </p>
                     <br />
-                    <p style={{ color: `var(--platinum)` }}><strong>My Skills include:</strong></p>
+                    <p style={{ color: `var(--platinum)`, marginBottom: `15px` }}><strong>My Skills include:</strong></p>
                     <ul>
                         <li>HTML, CSS, Javascript</li>
                         <li>PHP, Node.JS</li>

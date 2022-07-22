@@ -50,6 +50,10 @@ const BlogPage = () => {
         {
             document.getElementById("load-more").classList.add('greyed-out');
         }
+        else if(newCategory === 'All' && articles.length <= postCount)
+        {
+            document.getElementById("load-more").classList.add('greyed-out');
+        }
         else
         {
             document.getElementById("load-more").classList.remove('greyed-out');
@@ -76,7 +80,7 @@ const BlogPage = () => {
             <div id="blog">
                 <div className={ `topic-section` }>
                     <button className={ `topics selected` } onClick={(e) => { changeCategory(e, 'All') }}>All</button>
-                    { categories.map((category) => ( <div key={ category.id }><FontAwesomeIcon icon={'fa-diamond'} /><button topic-id={ category.Name } className={ `topics` } onClick={(e) => { changeCategory(e, category.Name) }}>{ category.Name }</button></div> ))}
+                    { categories.map((category) => ( <div key={ category.id } style={{ display: `flex`, alignItems: `center` }}><FontAwesomeIcon icon={'fa-diamond'} style={{ marginRight: `10px` }} /><button topic-id={ category.Name } className={ `topics` } onClick={(e) => { changeCategory(e, category.Name) }}>{ category.Name }</button></div> ))}
                 </div>
 
                 <hr style={{ background: `var(--gold)`, height: `2px`, width: `80px`, border: `none`, margin: `10px auto 10px auto` }}></hr>

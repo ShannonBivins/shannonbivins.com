@@ -11,7 +11,7 @@ const ServicePage = () => (
             <div className={ `service` } style={{display: `flex`, flexDirection: `column`, justifyContent: `center`, alignItems: `center`, padding: `0 var(--social-padding) 60px 0` }}>
                 <div style={{ display: `flex`, justifyContent: `space-evenly`, padding: `0 0 0 20px`, columnGap: `2%`, flexWrap: `wrap` }}>
                     <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
-                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-globe'}/><i className={ `fa-solid fa-globe` }></i> Web Development</h2>
+                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-globe'} style={{ marginRight: `5px` }}/><i className={ `fa-solid fa-globe` }></i> Web Development</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
                             I work with many languages, frameworks, and platforms to build stylish, optimized websites. I am a front and back-end developer capable of building interactive, data-driven sites or apps. I can work with most modern site-building tools.
@@ -19,7 +19,7 @@ const ServicePage = () => (
                     </div>
                     
                     <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
-                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-rocket'}/><i className={ `fa-solid fa-rocket` }></i> Speed Optimization</h2>
+                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-rocket'} style={{ marginRight: `5px` }}/><i className={ `fa-solid fa-rocket` }></i> Speed Optimization</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
                             I use tools to test your site for bloated assets, poorly organized code, and other things that can slow it down. I can then make modifications to the site that make it quick and efficient. This is great for user experience and search engine rankings.
@@ -27,7 +27,7 @@ const ServicePage = () => (
                     </div>
                     
                     <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
-                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={['fab', 'fa-searchengin']}/><i className={ `fa-brands fa-searchengin` }></i> SEO & Analytics</h2>
+                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={['fab', 'fa-searchengin']} style={{ marginRight: `5px` }}/><i className={ `fa-brands fa-searchengin` }></i> SEO & Analytics</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
                             I can analyze your site and figure out how it could be modified to better suit search engine preferences. I can then implement the modifications to improve your search engine rankings. This can extend your site's reach, increasing traffic and business.
@@ -35,7 +35,7 @@ const ServicePage = () => (
                     </div>
                     
                     <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
-                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-compass-drafting'}/><i className={ `fa-solid fa-compass-drafting` }></i> Design</h2>
+                        <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-compass-drafting'} style={{ marginRight: `5px` }}/><i className={ `fa-solid fa-compass-drafting` }></i> Design</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
                             If you need me to design your product before building it, that's no problem. I've designed this site and many others, both for style and ease-of-use. I can do artistic design and UI-driven design. I specialize in unique, custom websites.

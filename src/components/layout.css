@@ -8,7 +8,7 @@
     --white: #fff;
     --social-padding: 120px;
 }
-*, html, body, head, #home, #___gatsby, main
+*
 {
     cursor: url('../images/cursor.svg'), auto !important;
 }
@@ -22,6 +22,11 @@ body
 {
     margin: 0;
     padding: 0;
+}
+main
+{
+    display: flex;
+    justifyContent: center;
 }
 header
 {
@@ -37,21 +42,14 @@ h1, h2, h3, h4, h5, h6
 {
     font-family: 'Staatliches', sans-serif;
     color: var(--platinum);
+    font-weight: normal;
+    letter-spacing: 1px;
 }
-p
+p, ul
 {
     font-family: 'Inter', sans-serif;
     color: var(--light-blue);
     margin: 0;
-}
-ul
-{
-    font-family: 'Inter', sans-serif;
-    color: var(--light-blue);
-}
-h2 svg
-{
-    margin-right: 10px;
 }
 li::marker
 {
@@ -86,19 +84,19 @@ input::placeholder, textarea::placeholder
 {
     color: grey;
 }
-::-webkit-scrollbar {
+::-webkit-scrollbar
+{
     width: 14px;
     background: black;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb
+{
     border: 4px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
     border-radius: 9999px;
     background-color: var(--light-blue);
-  }
-:-webkit-autofill,
-:-webkit-autofill:hover,
-:-webkit-autofill:focus
+}
+:-webkit-autofill, :-webkit-autofill:hover, :-webkit-autofill:focus
 {
     -webkit-text-fill-color: var(--platinum) !important;
     box-shadow: 0 0 0px 1000px #000 inset;
@@ -114,12 +112,11 @@ button
     padding: 12px 20px 10px 20px;
     margin-top: 20px;
     font-size: 20px;
-    cursor: pointer;
     transition: 0.1s;
-    border-style: solid;
+    border-radius: 4px;
     border-width: 0 0 2px 0;
     border-color: var(--gold);
-    border-radius: 4px;
+    border-style: solid;
 }
 button:hover
 {
@@ -190,7 +187,6 @@ button:active
     overflow: hidden;
     box-sizing: border-box;
     transition: 0.1s;
-    text-align: left;
 }
 #menu-items a
 {
@@ -204,7 +200,9 @@ button:active
     line-height: 1.1;
     background: var(--black);
     border-radius: 8px 0 0 8px;
-    border-bottom: 2px solid var(--gold);
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: var(--gold);
 }
 #menu-btn svg
 {
@@ -224,21 +222,20 @@ button:active
     align-items: center;
     background: var(--black);
     color: var(--platinum);
+    padding: 10px;
     border-radius: 8px;
-    padding: 20px;
+    border-style: solid;
     border-width: 0 0 2px 0;
     border-color: var(--gold);
-    border-style: solid;
 }
 #social a
 {
     color: var(--platinum);
+    padding: 10px;
+    transition: 0.1s;
 }
-#social a:not(:last-child)
-{
-    margin-bottom: 20px;
-}
-#social svg:hover
+
+#social a:hover
 {
     color: var(--gold);
 }
@@ -251,10 +248,6 @@ button:active
     font-size: 30px;
     z-index: 8;
 }
-#social-wrap svg
-{
-    transition: 0.1s;
-}
 .active
 {
     transform: translateX(0) !important;
@@ -266,28 +259,23 @@ button:active
 /***** CONTACT SECTION *****/
 #contact
 {
-    top: 0;
-    left: 0;
-    right: 0;
-    font-family: 'Staatliches', sans-serif;
     width: 100vw;
     min-height: calc(100vh - 100px);
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 60px var(--social-padding) 60px 0;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
 }
 .text-section
 {
-    display: flex;
     max-width: min(1000px, 90%);
+    display: flex;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
 }
-.text-section h3, .form-section h3
+.text-section h3
 {
     font-size: 34px;
 }
@@ -309,7 +297,6 @@ button:active
     justify-content: center;
     align-items: center;
     font-family: 'Staatliches', sans-serif;
-    font-size: 40px;
     padding: 40px;
     text-align: center;
     transition: 0.1s;
@@ -319,6 +306,7 @@ button:active
 #form-message p
 {
     color: var(--black);
+    font-size: 24px;
     font-weight: bold;
 }
 /***** END CONTACT SECTION *****/
@@ -326,44 +314,16 @@ button:active
 
 
 /***** SERVICES SECTION *****/
-.services
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 0;
-    flex-wrap: wrap;
-}
-.services div
-{
-    display: flex;
-    align-items: center;
-}
-.services i
-{
-    margin-right: 10px;
-    font-size: 40px;
-    color: var(--black);
-}
-.services p
-{
-    font-size: 40px;
-    color: var(--platinum);
-}
 #services
 {
     padding: 60px 0 60px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #services .service
 {
     padding-right: var(--social-padding);
-}
-#services
-{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 #data-service li::marker
 {
@@ -377,9 +337,6 @@ button:active
 #about
 {
     min-height: calc(100vh - 100px);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     padding: 60px var(--social-padding) 60px 0;
     box-sizing: border-box;
 }
@@ -387,8 +344,6 @@ button:active
 {
     max-width: min(1000px, 90%);
     column-gap: 2%;
-    justify-content: center;
-    align-items: center;
 }
 #about-img
 {
@@ -445,8 +400,6 @@ button:active
 .topics
 {
     color: var(--platinum);
-    text-decoration: none;
-    font-family: 'Staatliches', sans-serif;
     font-size: 30px;
     margin: 0 15px;
     transition: 0.1s;
@@ -456,7 +409,7 @@ button:active
 }
 .topics:hover
 {
-    transform: scale(1.05);
+    transform: scale(1.1);
     color: var(--gold);
     background: transparent;
 }
@@ -506,7 +459,6 @@ button:active
     box-sizing: border-box;
     text-align: center;
     padding-top: 10%;
-    font-family: 'Staatliches', sans-serif;
 }
 .post-title
 {
@@ -517,10 +469,6 @@ button:active
 .post:hover
 {
     transform: scale(1.02);
-}
-.post:hover .post-info
-{
-    color: var(--platinum);
 }
 .post:hover .post-img
 {
@@ -537,10 +485,10 @@ button:active
 }
 .greyed-out, .greyed-out:hover
 {
-    background: grey !important;
+    background: grey;
     color: var(--black);
-    border-color: grey !important;
-    transform: scale(1) !important;
+    border-color: grey;
+    transform: scale(1);
 }
 .selected
 {
@@ -590,7 +538,6 @@ button:active
     transform: translateX(-50%);
     width: 100vw;
     display: flex;
-    transition: 0.1s;
 }
 #portrait
 {

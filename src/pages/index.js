@@ -10,33 +10,9 @@ const IndexPage = () => {
     <Layout>
       <div id="home">
         <div id="site-title">
-          <h1
-            style={{
-              fontFamily: `'VT323', monotype`,
-              fontSize: `1.875vh`,
-              lineHeight: 1.1,
-              color: `#CC9832`,
-              margin: `0 0 0px 4px`,
-            }}
-          >Hi, my name is</h1>
-          <h2
-            style={{
-              fontFamily: `'Staatliches', sans-serif`,
-              fontSize: `6.25vh`,
-              lineHeight: 1.1,
-              color: `var(--platinum)`,
-              margin: 0,
-            }}
-          >Shannon Bivins</h2>
-          <h3
-            style={{
-              fontFamily: `'Staatliches', sans-serif`,
-              fontSize: `6.25vh`,
-              lineHeight: 1.1,
-              color: `var(--light-blue)`,
-              margin: 0,
-            }}
-          >Programmer. Designer. Developer.</h3>
+          <h1 style={{ fontFamily: `'VT323', monotype`, letterSpacing: 0, fontSize: `1.875vh`, lineHeight: 1.1, color: `#CC9832`, margin: `0 0 0px 4px` }}>Hi, my name is</h1>
+          <h2 style={{ fontSize: `6.25vh`, lineHeight: 1.1, margin: 0, fontWeight: `bold`, letterSpacing: `2px` }}>Shannon Bivins</h2>
+          <h3 style={{ fontSize: `6.25vh`, lineHeight: 1.1, color: `var(--light-blue)`, margin: 0, fontWeight: `bold`, letterSpacing: `2px` }}>Programmer. Designer. Developer.</h3>
         </div>
 
         <div id="home-bottom">
