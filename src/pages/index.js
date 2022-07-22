@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/layout';
 import electricityJS from '../components/electricity';
-import image from '../images/portrait-final.png';
+import image from '../images/portrait-final.webp';
 
 const IndexPage = () => {
   useEffect(() => { electricityJS() }, [])

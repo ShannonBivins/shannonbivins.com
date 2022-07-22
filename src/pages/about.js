@@ -45,7 +45,7 @@ const AboutPage = () => (
                     </ul>
                 </div>
                 <div id="about-img">
-                    <StaticImage src="../images/portrait-drawing.jpg" alt="" loading="eager"/>
+                    <StaticImage src="../images/portrait-drawing.webp" alt="" loading="eager"/>
                 </div>
             </div>
             <div style={{ margin: `40px auto 0 auto` }}>
