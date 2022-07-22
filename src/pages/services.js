@@ -10,7 +10,7 @@ const ServicePage = () => (
         <div id="services">
             <div className={ `service` } style={{display: `flex`, flexDirection: `column`, justifyContent: `center`, alignItems: `center`, padding: `0 var(--social-padding) 60px 0` }}>
                 <div style={{ display: `flex`, justifyContent: `space-evenly`, padding: `0 0 0 20px`, columnGap: `2%`, flexWrap: `wrap` }}>
-                    <div style={{ width: `clamp(350px, 20%, 500px)` }}>
+                    <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
                         <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-globe'}/><i className={ `fa-solid fa-globe` }></i> Web Development</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
@@ -18,7 +18,7 @@ const ServicePage = () => (
                         </p>
                     </div>
                     
-                    <div style={{ width: `clamp(350px, 20%, 500px)` }}>
+                    <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
                         <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-rocket'}/><i className={ `fa-solid fa-rocket` }></i> Speed Optimization</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
@@ -26,7 +26,7 @@ const ServicePage = () => (
                         </p>
                     </div>
                     
-                    <div style={{ width: `clamp(350px, 20%, 500px)` }}>
+                    <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
                         <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={['fab', 'fa-searchengin']}/><i className={ `fa-brands fa-searchengin` }></i> SEO & Analytics</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
@@ -34,7 +34,7 @@ const ServicePage = () => (
                         </p>
                     </div>
                     
-                    <div style={{ width: `clamp(350px, 20%, 500px)` }}>
+                    <div style={{ width: `clamp(350px, 20%, 500px)`, margin: `10px` }}>
                         <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-compass-drafting'}/><i className={ `fa-solid fa-compass-drafting` }></i> Design</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>

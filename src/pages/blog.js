@@ -44,13 +44,23 @@ const BlogPage = () => {
         setCategory(newCategory);
         document.getElementsByClassName('selected')[0].classList.remove('selected');
         event.nativeEvent.srcElement.classList.add('selected');
+        setPostCount(8);
+
+        if(newCategory !== 'All' && articles.filter(article => article.Categories[0].Name === newCategory).length <= postCount)
+        {
+            document.getElementById("load-more").classList.add('greyed-out');
+        }
+        else
+        {
+            document.getElementById("load-more").classList.remove('greyed-out');
+        }
     }
 
     function loadMore(event)
     {
         let newPostCount = postCount + loadCount;
 
-        if(newPostCount >= articles.length)
+        if(newPostCount >= articles.filter(article => article.Categories[0].Name === currentCategory).length)
         {
             event.nativeEvent.srcElement.classList.add('greyed-out');
             setPostCount(articles.length);
@@ -69,11 +79,11 @@ const BlogPage = () => {
                     { categories.map((category) => ( <div key={ category.id }><FontAwesomeIcon icon={'fa-diamond'} /><button topic-id={ category.Name } className={ `topics` } onClick={(e) => { changeCategory(e, category.Name) }}>{ category.Name }</button></div> ))}
                 </div>
 
-                <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, margin: `10px auto 10px auto` }}></hr>
+                <hr style={{ background: `var(--gold)`, height: `2px`, width: `80px`, border: `none`, margin: `10px auto 10px auto` }}></hr>
 
                 <ArticleGrid articles={ articles } category={ currentCategory } postCount={ postCount }/>
 
-                <button onClick={(e) => { loadMore(e) }}>LOAD MORE</button>
+                <button id="load-more" onClick={(e) => { loadMore(e) }}>LOAD MORE</button>
             </div>
         </Layout>
     )

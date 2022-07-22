@@ -82,6 +82,10 @@ textarea
     min-height: 200px;
     resize: none;
 }
+input::placeholder, textarea::placeholder
+{
+    color: grey;
+}
 ::-webkit-scrollbar {
     width: 14px;
     background: black;
@@ -111,7 +115,7 @@ button
     margin-top: 20px;
     font-size: 20px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.1s;
     border-style: solid;
     border-width: 0 0 2px 0;
     border-color: var(--gold);
@@ -133,7 +137,7 @@ button:active
 /***** GLOBAL ELEMENTS *****/
 #sb-logo
 {
-    transition: transform 0.2s;
+    transition: transform 0.1s;
     z-index: 9;
 }
 #sb-logo:hover
@@ -153,7 +157,7 @@ button:active
     line-height: 28px;
     color: var(--platinum);
     font-family: 'Staatliches', sans-serif;
-    transition: 0.2s;
+    transition: 0.1s;
     box-sizing: border-box;
     z-index: 9;
 }
@@ -185,12 +189,12 @@ button:active
     border-bottom: 2px solid var(--gold);
     overflow: hidden;
     box-sizing: border-box;
-    transition: 0.2s;
+    transition: 0.1s;
     text-align: left;
 }
 #menu-items a
 {
-    transition: 0.2s;
+    transition: 0.1s;
 }
 #menu-btn
 {
@@ -205,7 +209,7 @@ button:active
 #menu-btn svg
 {
     padding: 10px 20px;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 #menu-btn svg:hover
 {
@@ -249,7 +253,7 @@ button:active
 }
 #social-wrap svg
 {
-    transition: 0.2s;
+    transition: 0.1s;
 }
 .active
 {
@@ -308,14 +312,14 @@ button:active
     font-size: 40px;
     padding: 40px;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.1s;
     opacity: 0;
     border-bottom: 2px solid var(--platinum);
-    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
 }
 #form-message p
 {
     color: var(--black);
+    font-weight: bold;
 }
 /***** END CONTACT SECTION *****/
 
@@ -445,14 +449,14 @@ button:active
     font-family: 'Staatliches', sans-serif;
     font-size: 30px;
     margin: 0 15px;
-    transition: 0.2s;
+    transition: 0.1s;
     background: transparent;
     border: none;
     padding: 0 8px;
 }
 .topics:hover
 {
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: var(--gold);
     background: transparent;
 }
@@ -475,7 +479,7 @@ button:active
     display: flex;
     flex-direction: column;
     min-width: min(400px, 90%);
-    transition: 0.2s;
+    transition: 0.1s;
     background-color: var(--black);
     border-radius: 8px;
     margin: 30px;
@@ -495,6 +499,7 @@ button:active
     border-radius: 8px;
     background-color: var(--light-blue);
     width: 100%;
+    border-bottom: solid 2px var(--platinum);
 }
 .post .post-info
 {
@@ -511,7 +516,7 @@ button:active
 }
 .post:hover
 {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 .post:hover .post-info
 {
@@ -573,7 +578,7 @@ button:active
     flex-direction: column;
     justify-content: center;
     z-index: 3;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 #home-bottom
 {
@@ -585,13 +590,13 @@ button:active
     transform: translateX(-50%);
     width: 100vw;
     display: flex;
-    transition: height 0.3s, width 0.3s;
+    transition: 0.1s;
 }
 #portrait
 {
     width: calc(100% / 3);
     height: auto;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 .canvas-elec
 {

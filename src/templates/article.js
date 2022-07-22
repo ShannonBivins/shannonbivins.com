@@ -9,7 +9,7 @@ const ArticlePage = ({ data }) => {
             <div id="single-post" style={{ display: `flex`, flexDirection: `column`, alignItems: `center`, margin: `80px 0`, width: `100%` }}>
                 <div style={{ width: `min(1000px, 90%)`, display: `flex`, flexDirection: `column` }}>
                     <div style={{ backgroundColor: `var(--black)`, borderRadius: `8px 8px 0 0`, padding: `60px 60px 0`, width: `fit-content`, boxSizing: `border-box`  }}>
-                        <img className="post-img" src={ data.strapiArticle.Image.url } style={{ backgroundColor: `var(--light-blue)`, padding: `40px`, borderRadius: `8px`, borderBottom: `solid 2px var(--platinum)`, maxWidth: `500px` }} alt=""/>
+                        <img className="post-img" src={ data.strapiArticle.Image.url } style={{ backgroundColor: `var(--light-blue)`, padding: `40px`, borderRadius: `8px`, maxWidth: `500px` }} alt=""/>
                     </div>
 
                     <div style={{ backgroundColor: `var(--black)`, borderRadius: `0 8px 8px 8px`, borderBottom: `solid 2px var(--gold)`, padding: `0 60px 60px`, width: `100%`, boxSizing: `border-box`  }}>
