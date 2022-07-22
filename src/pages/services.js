@@ -38,7 +38,7 @@ const ServicePage = () => (
                         <h2 style={{ textAlign: `center`, marginBottom: 0 }}><FontAwesomeIcon icon={'fa-compass-drafting'} style={{ marginRight: `5px` }}/><i className={ `fa-solid fa-compass-drafting` }></i> Design</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none` }}></hr>
                         <p>
-                            If you need me to design your product before building it, that's no problem. I've designed this site and many others, both for style and ease-of-use. I can do artistic design and UI-driven design. I specialize in unique, custom websites.
+                            If you need me to design your product before building it, that's no problem. I've designed this site and many others, both for style and accessibility. I can do creative design and UI-driven design. I specialize in unique, custom websites.
                         </p>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ const ServicePage = () => (
                         <h2 style={{ marginBottom: 0 }}>Full-Stack Development</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, display: `inline-block` }}></hr>
                         <p>
-                            With full-stack experience, I have the skills needed to see your project through from design, to functionality, to optimization. I know enough languages to build most anything and can pick new ones up quickly.
+                            With full-stack experience, I have the skills needed to see your project through from design, to development, to optimization. I know enough languages to build most anything and can pick new ones up quickly.
                         </p>
                         <br/>
                         <p>
@@ -105,18 +105,18 @@ const ServicePage = () => (
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style={{ fill: `#CC9832`, padding: 0, marginBottom: `0px`, display: `block` }}><path d="M0 0 L0 100 L100 100 Z"></path></svg>
                 
                 <div id="sql-section" style={{ background: `var(--gold)`, width: `100%`, display: `flex`, alignItems: `center`, justifyContent: `center`, padding: `40px var(--social-padding) 40px 10px`, boxSizing: `border-box` }}>
-                    <p style={{ maxWidth: `300px`, color: `var(--platinum)`, textAlign: `center` }}>
-                        Have your custom database mapped and created. Manage your database with custom SQL queries to precisely target and modify your data.
+                    <p style={{ maxWidth: `300px`, color: `var(--black)`, textAlign: `center` }}>
+                        An app with no data can only do so much. I work with database management systems to create dynamic applications capable of delivering different experiences to different users.
                     </p>
                     
                     <div style={{ display: `flex`, alignItems: `center`, justifyContent: `center`, margin: `20px` }}>
                         <FontAwesomeIcon icon={'fa-angles-left'}/>
-                        <h2 style={{ display: `flex`, alignItems: `center`, fontFamily: `'Staatliches', sans-serif`, color: `var(--black)`, margin: `0 20px`, fontSize: `30px` }}><FontAwesomeIcon icon={'fa-database'}/> SQL</h2>
+                        <h2 style={{ display: `flex`, alignItems: `center`, fontFamily: `'Staatliches', sans-serif`, color: `var(--black)`, margin: `0 20px`, fontSize: `30px` }}><FontAwesomeIcon icon={'fa-database'} style={{ marginRight: `10px` }}/> SQL</h2>
                         <FontAwesomeIcon icon={'fa-angles-right'}/>
                     </div>
                     
-                    <p style={{ maxWidth: `300px`, color: `var(--platinum)`, textAlign: `center` }}>
-                        Have a custom web interface built so you can manage your data easily and intuitively. Have a CMS built just for your site, or modify an existing one.
+                    <p style={{ maxWidth: `300px`, color: `var(--black)`, textAlign: `center` }}>
+                        A content management system can help make the process of modeling and managing data less technical. I use popular CMSs like WordPress and Strapi to empower end-users to manage their own data.
                     </p>
                 </div>
                 
@@ -133,7 +133,7 @@ const ServicePage = () => (
                         <h2 style={{ marginBottom: 0 }}>3CX Phone Systems</h2>
                         <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, display: `inline-block` }}></hr>
                         <p>
-                            I am an advanced certified 3CX expert. I can build you and your business a custom phone system with all the extensions, groups, queues, and routing it needs to direct your customers right where they need to go.
+                            I am an advanced certified 3CX expert. I can build you and your company a custom phone system with all the extensions, groups, queues, and routing it needs to direct your customers right where they need to go.
                         </p>
                     </div>
                 </div>

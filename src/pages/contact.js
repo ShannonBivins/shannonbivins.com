@@ -86,12 +86,12 @@ const ContactPage = () => {
         <Layout>
             <div id="contact">
                 <div className={ `text-section` }>
-                    <h3 style={{ marginTop: 0, textAlign: `center`, color: `var(--platinum)`, marginBottom: 0 }}>WANT TO WORK WITH ME?</h3>
+                    <h3 style={{ marginTop: 0, textAlign: `center`, color: `var(--platinum)`, marginBottom: 0 }}>HOW CAN I HELP YOU?</h3>
 
                     <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, margin: `15px auto 20px auto` }}></hr>
 
                     <p style={{ marginBottom: `34px`, textAlign: `center` }}>
-                        If you have a project and you're interested in working with me, please fill out the form below to let me know and I will get back with you as soon as I can. Thank you!
+                        Please feel free to contact me about any work, projects, or ideas that I could assist you with. Simply submit the form below and I will get back to you as soon as I can. Thank you!
                     </p>
             
                     {/* <div class="services">
