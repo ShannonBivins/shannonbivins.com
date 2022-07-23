@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import Seo from "../components/seo"
 
 const ContactPage = () => {
 
@@ -83,60 +84,63 @@ const ContactPage = () => {
     }
 
     return (
-        <Layout>
-            <div id="contact">
-                <div className={ `text-section` }>
-                    <h3 style={{ marginTop: 0, textAlign: `center`, color: `var(--platinum)`, marginBottom: 0 }}>HOW CAN I HELP YOU?</h3>
+        <>
+            <Seo title={ `SB / Contact` }/>
+            <Layout>
+                <div id="contact">
+                    <div className={ `text-section` }>
+                        <h3 style={{ marginTop: 0, textAlign: `center`, color: `var(--platinum)`, marginBottom: 0 }}>HOW CAN I HELP YOU?</h3>
 
-                    <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, margin: `15px auto 20px auto` }}></hr>
+                        <hr style={{ background: `var(--gold)`, height: `2px`, width: `40px`, border: `none`, margin: `15px auto 20px auto` }}></hr>
 
-                    <p style={{ marginBottom: `34px`, textAlign: `center` }}>
-                        Please feel free to contact me about any work, projects, or ideas that I could assist you with. Simply submit the form below and I will get back to you as soon as I can. Thank you!
-                    </p>
-            
-                    {/* <div class="services">
-                        <div>
-                            <i class="fas fa-globe"></i>
-                            <p style="font-family: 'Geo', sans-serif;">
-                                Websites
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <i class="fas fa-dragon"></i>
-                            <p style="font-family: 'Jolly Lodger', sans-serif;">
-                                Video Games
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <i class="fas fa-code"></i>
-                            <p style="font-family: 'VT323', sans-serif;">
-                                Coding
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <i class="fas fa-paint-brush"></i>
-                            <p style="font-family: 'Vujahday Script', sans-serif; font-weight: bold;">
-                                Design
-                            </p>
-                        </div>
-                    </div> */}
+                        <p style={{ marginBottom: `34px`, textAlign: `center` }}>
+                            Please feel free to contact me about any work, projects, or ideas that I could assist you with. Simply submit the form below and I will get back to you as soon as I can. Thank you!
+                        </p>
                 
-                    <form id="contact-form">
-                        <input type="text" name="name" placeholder="Name"/>
-                        <input type="text" name="email" placeholder="Email"/>
-                        <input type="text" name="subject" placeholder="Subject"/>
-                        <textarea name="message" placeholder="Message"></textarea>
-                        <button onClick={(e) => { submitForm(e) }} type="button">Submit</button>
-                    </form>
-            
-                    <div id="form-message">
+                        {/* <div class="services">
+                            <div>
+                                <i class="fas fa-globe"></i>
+                                <p style="font-family: 'Geo', sans-serif;">
+                                    Websites
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <i class="fas fa-dragon"></i>
+                                <p style="font-family: 'Jolly Lodger', sans-serif;">
+                                    Video Games
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <i class="fas fa-code"></i>
+                                <p style="font-family: 'VT323', sans-serif;">
+                                    Coding
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <i class="fas fa-paint-brush"></i>
+                                <p style="font-family: 'Vujahday Script', sans-serif; font-weight: bold;">
+                                    Design
+                                </p>
+                            </div>
+                        </div> */}
+                    
+                        <form id="contact-form">
+                            <input type="text" name="name" placeholder="Name"/>
+                            <input type="text" name="email" placeholder="Email"/>
+                            <input type="text" name="subject" placeholder="Subject"/>
+                            <textarea name="message" placeholder="Message"></textarea>
+                            <button onClick={(e) => { submitForm(e) }} type="button">Submit</button>
+                        </form>
+                
+                        <div id="form-message">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </Layout>
+            </Layout>
+        </>
     )
 }
 

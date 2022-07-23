@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
 import ArticleGrid from '../components/article-grid';
+import Seo from "../components/seo"
 
 const BlogPage = () => {
 
@@ -76,20 +77,23 @@ const BlogPage = () => {
     }
 
     return (
-        <Layout>
-            <div id="blog">
-                <div className={ `topic-section` }>
-                    <button className={ `topics selected` } onClick={(e) => { changeCategory(e, 'All') }}>All</button>
-                    { categories.map((category) => ( <div key={ category.id } style={{ display: `flex`, alignItems: `center` }}><FontAwesomeIcon icon={'fa-diamond'} style={{ marginRight: `10px` }} /><button topic-id={ category.Name } className={ `topics` } onClick={(e) => { changeCategory(e, category.Name) }}>{ category.Name }</button></div> ))}
+        <>
+            <Seo title={ `SB / Blog` }/>
+            <Layout>
+                <div id="blog">
+                    <div className={ `topic-section` }>
+                        <button className={ `topics selected` } onClick={(e) => { changeCategory(e, 'All') }}>All</button>
+                        { categories.map((category) => ( <div key={ category.id } style={{ display: `flex`, alignItems: `center` }}><FontAwesomeIcon icon={'fa-diamond'} style={{ marginRight: `10px` }} /><button topic-id={ category.Name } className={ `topics` } onClick={(e) => { changeCategory(e, category.Name) }}>{ category.Name }</button></div> ))}
+                    </div>
+
+                    <hr style={{ background: `var(--gold)`, height: `2px`, width: `80px`, border: `none`, margin: `10px auto 10px auto` }}></hr>
+
+                    <ArticleGrid articles={ articles } category={ currentCategory } postCount={ postCount }/>
+
+                    <button id="load-more" onClick={(e) => { loadMore(e) }}>LOAD MORE</button>
                 </div>
-
-                <hr style={{ background: `var(--gold)`, height: `2px`, width: `80px`, border: `none`, margin: `10px auto 10px auto` }}></hr>
-
-                <ArticleGrid articles={ articles } category={ currentCategory } postCount={ postCount }/>
-
-                <button id="load-more" onClick={(e) => { loadMore(e) }}>LOAD MORE</button>
-            </div>
-        </Layout>
+            </Layout>
+        </>
     )
 }
 
