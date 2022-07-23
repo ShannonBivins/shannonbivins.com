@@ -2,7 +2,7 @@ import "@fontsource/staatliches"
 import "@fontsource/inter"
 import "@fontsource/vt323"
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAnglesLeft, faAnglesRight, faGlobe, faRocket, faCompassDrafting, faDatabase, faCode, faDiamond, faBars, faX, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesLeft, faAnglesRight, faGlobe, faRocket, faCompassDrafting, faDatabase, faCode, faDiamond, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faYoutube, faLinkedinIn, faGithub, faInstagram, faTwitter, faSearchengin } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faYoutube);
@@ -20,5 +20,3 @@ library.add(faDatabase);
 library.add(faCode);
 library.add(faDiamond);
 library.add(faBars);
-library.add(faX);
-library.add(faCheck);

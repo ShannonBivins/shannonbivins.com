@@ -18,7 +18,7 @@ const ArticlePage = ({ data }) => {
                         <div style={{ backgroundColor: `var(--black)`, borderRadius: `0 8px 8px 8px`, borderBottom: `solid 2px var(--gold)`, padding: `0 60px 60px`, width: `100%`, boxSizing: `border-box`  }}>
                             <h2 style={{ margin: `40px 0 0 0` }}>{ data.strapiArticle.Title }</h2>
                             <h4 style={{ margin: `10px 0 0 0` }}>{ data.strapiArticle.Categories[0].Name }</h4>
-                            <hr style={{ width: `80px`, border: `1px solid var(--gold)`, margin: `20px 0` }}></hr>
+                            <hr style={{ background: `var(--gold)`, height: `2px`, width: `80px`, border: `none`, display: `inline-block`, margin: `20px 0` }}></hr>
                             <p style={{ margin: 0 }}>{ data.strapiArticle.Content.data.Content }</p>
                         </div>
                     </div>
